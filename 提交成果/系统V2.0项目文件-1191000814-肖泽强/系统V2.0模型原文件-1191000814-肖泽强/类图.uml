@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>web.RepoServlet</OriginalElement>
+  <nodes>
+    <node x="1410.0" y="1754.0">mapper.DraftOrderMapper</node>
+    <node x="535.0882352941176" y="176.0">web.UserServlet</node>
+    <node x="1734.0" y="732.0">pojo.Customer</node>
+    <node x="878.0" y="2017.0">service.OrderItemService</node>
+    <node x="589.0" y="1754.0">service.CustomerService</node>
+    <node x="1796.0882352941176" y="0.0">service.OrderService</node>
+    <node x="1973.0" y="2017.0">pojo.ResultType</node>
+    <node x="571.0" y="2017.0">utils.MyBatisUtils</node>
+    <node x="905.0" y="732.0">pojo.FrontOrder</node>
+    <node x="619.0" y="1467.0">pojo.RepoInfo</node>
+    <node x="0.0" y="1467.0">pojo.FrontModify</node>
+    <node x="440.0" y="422.0">web.RepoServlet.RepoInfo2</node>
+    <node x="0.0" y="2017.0">mapper.RepoMapper</node>
+    <node x="767.25" y="0.0">web.BaseServlet</node>
+    <node x="341.0" y="1467.0">pojo.Result</node>
+    <node x="614.0" y="1134.0">pojo.User</node>
+    <node x="892.0" y="1754.0">service.UserService</node>
+    <node x="1376.0882352941176" y="153.0">web.CustomerServlet</node>
+    <node x="0.0" y="1134.0">pojo.OrderItemVo</node>
+    <node x="220.0" y="445.0">web.RepoServlet.FSearch</node>
+    <node x="500.0" y="732.0">pojo.DraftOrderVo</node>
+    <node x="1165.0" y="1754.0">pojo.FrontId</node>
+    <node x="132.08823529411768" y="164.5">web.RepoServlet</node>
+    <node x="907.0" y="1134.0">pojo.FrontAddItem</node>
+    <node x="0.0" y="422.0">web.RepoServlet.FDispatch</node>
+    <node x="0.0" y="732.0">pojo.FrontDraftOrder</node>
+    <node x="322.0" y="2017.0">mapper.OrderItemMapper</node>
+    <node x="1133.0" y="2017.0">web.DraftOrderServlet</node>
+    <node x="1206.0" y="1134.0">mapper.UserMapper</node>
+    <node x="1729.0" y="1467.0">service.RepoService</node>
+    <node x="1367.0" y="732.0">pojo.OrderVo</node>
+    <node x="0.0" y="1754.0">mapper.CustomerMapper</node>
+    <node x="864.0" y="1467.0">service.DraftOrderService</node>
+    <node x="315.0" y="1134.0">pojo.Goods</node>
+    <node x="1160.0" y="1467.0">service.GoodsService</node>
+    <node x="1426.0" y="1467.0">pojo.FrontAdd</node>
+    <node x="1562.0" y="1134.0">utils.Utils</node>
+    <node x="304.0" y="1754.0">mapper.GoodsMapper</node>
+    <node x="1553.0" y="2017.0">web.OrderServlet</node>
+    <node x="1701.0" y="1754.0">mapper.OrderMapper</node>
+    <node x="981.0882352941176" y="153.0">web.GoodsServlet</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="web.RepoServlet.FDispatch" target="web.RepoServlet" relationship="INNER_CLASS">
+      <point x="0.0" y="-132.5" />
+      <point x="100.0" y="397.0" />
+      <point x="323.5882352941177" y="397.0" />
+      <point x="0.0" y="98.0" />
+    </edge>
+    <edge source="web.RepoServlet.RepoInfo2" target="web.RepoServlet" relationship="INNER_CLASS">
+      <point x="0.0" y="-132.5" />
+      <point x="550.5" y="397.0" />
+      <point x="323.5882352941177" y="397.0" />
+      <point x="0.0" y="98.0" />
+    </edge>
+    <edge source="web.CustomerServlet" target="web.BaseServlet" relationship="GENERALIZATION">
+      <point x="0.0" y="-109.5" />
+      <point x="1563.5882352941176" y="128.0" />
+      <point x="954.75" y="128.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="web.RepoServlet.FSearch" target="web.RepoServlet" relationship="INNER_CLASS">
+      <point x="0.0" y="-109.5" />
+      <point x="320.0" y="397.0" />
+      <point x="323.5882352941177" y="397.0" />
+      <point x="0.0" y="98.0" />
+    </edge>
+    <edge source="web.RepoServlet" target="web.BaseServlet" relationship="GENERALIZATION">
+      <point x="0.0" y="-98.0" />
+      <point x="323.5882352941177" y="128.0" />
+      <point x="954.75" y="128.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="web.UserServlet" target="web.BaseServlet" relationship="GENERALIZATION">
+      <point x="0.0" y="-86.5" />
+      <point x="748.0882352941176" y="128.0" />
+      <point x="954.75" y="128.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="web.GoodsServlet" target="web.BaseServlet" relationship="GENERALIZATION">
+      <point x="0.0" y="-109.5" />
+      <point x="1168.5882352941176" y="128.0" />
+      <point x="954.75" y="128.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="0.31196772747646795" showDependencies="false" x="1053.0" y="1105.5" />
+  <SelectedNodes>
+    <node>web.RepoServlet</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>内部类</Category>
+    <Category>字段</Category>
+    <Category>属性</Category>
+    <Category>方法</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
