@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.CustomerMapper">
+  <!--  namespace是名称空间,表示对应哪个接口文件,必须用带路径的接口全类名-->
+  <!--  id是表示对应哪个函数-->
+  <!--  #{id}表示从传递过来的参数中取出id值-->
+  <!--  #{username}, #{password}表示从可以从传进来的对象中取出其属性 'username', 'password-->
+  <select id="getById" resultType="pojo.Customer">
+    select * from retail.customer where id = #{id}
+  </select>
+
+  <select id="getByFullName" resultType="pojo.Customer">
+    select * from retail.customer where name = #{name}
+  </select>
+
+  <select id="getByName" resultType="pojo.Customer">
+    select * from retail.customer where name like #{pattern}
+  </select>
+
+  <select id="getByNameAndPassword" resultType="pojo.Customer">
+    select * from retail.customer where name=#{param1} and password=#{param2};
+  </select>
+
+  <select id="getAll" resultType="pojo.Customer">
+    select * from retail.customer
+  </select>
+
+  <select id="getMaxId" resultType="int">
+    select ifnull(max(id), 0) from retail.customer
+  </select>
+
+  <delete id="deleteById">
+    delete from retail.customer where id = #{id}
+  </delete>
+
+  <update id="updateById">
+    update retail.customer
+    set password =#{password}, phone = #{phone}, company = #{company},method=#{method}
+    where id = #{id}
+  </update>
+
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+    insert into retail.customer values (#{id}, #{name}, #{password}, #{phone}, #{company}, #{method})
+  </insert>
+
+</mapper>

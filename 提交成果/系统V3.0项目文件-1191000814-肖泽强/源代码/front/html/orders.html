@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单管理</title>
+    <link rel="stylesheet" href="../css/layouts.css">
+    <link rel="shortcut icon" href="../sprites/tab.png" type="image/x-icon">
+    <script src="../js/orders.js"></script>
+    <script src="../js/utils.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    
+</head>
+<body onload="main()">
+    <div class="layout_0">
+        <div class="layout_0_div" >
+            <iframe class="layout_0_header" src="./layouts/header.html#header" frameborder="0"></iframe>
+            <div class="layout_0_body">
+                <iframe class="layout_1_left" src="./layouts/business.html" frameborder="0"></iframe>
+                <div class="layout_1_right" id="goods_body">
+                    <h2 class="business_name">订单管理</h2>
+                    <div class="business_row">
+                        <input type="button" value="付款" id="save_sell">
+                        <input type="text" id="1" value="" placeholder="订单ID">
+                        <input type="text" id="userId1" value="" placeholder="员工ID" readonly="readonly">
+                        <input type="button" value="退款" id="save_sell1">
+                        <input type="text" id="2" placeholder="订单id"> 
+                        <input type="text" id="userId2" value="" placeholder="员工ID" readonly="readonly"><br>
+                        <input type="button" value="删除" id="save_sell2" style="background-color: rgb(192, 39, 39);">
+                        <input type="text" id="3" placeholder="订单id"> 
+                    </div>
+                    <br>
+                    <br>
+                    <div class="business_row">
+                        <input type="button" value="显示所有订单" id="confirm_sell"> <br>
+                    </div>
+                    <hr>
+                    <div class="business_table_div">
+                        <table class="business_table" id="sell_table">
+                            <th>订单id</th>
+                            <th>订单总价</th>
+                            <th>是否支付</th>
+                            <th>是否退款</th>
+                           
+                            
+
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <iframe class="layout_0_footer" src="./layouts/footer.html#footer" frameborder="0" style="flex-grow:0.1;"></iframe>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>

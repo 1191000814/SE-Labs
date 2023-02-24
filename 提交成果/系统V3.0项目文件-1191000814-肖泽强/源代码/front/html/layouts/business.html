@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        html{
+            height: 100%;
+        }
+
+        body{
+            height: 100%;
+        }
+
+        .business_button{
+            outline: none;
+            border-radius: 0px;
+            margin-top: 8%;
+            background-color: rgba(200,230,232, 1);
+            height: 36px;
+            font-size: 24px;
+            width: 128px;
+            color: black;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+
+        .business_button:hover{
+            background-color: white;
+        }
+
+        #works{
+            height: 100%;
+            border-radius: 5%;
+            user-select: none;
+        }
+
+        #space{
+            height: auto;
+            font-size: 32px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            border-bottom: 2px black double;
+        }
+    </style>
+</head>
+<body>
+    <div id="works" style="display: flex; flex-direction: column; ">
+        <div id="space">业务项目</div>
+        <input type="button" class="business_button" value="个人中心" onclick="window.parent.location.href='../self.html'" id="self">
+        <input type="button" class="business_button" value="货物信息" onclick="window.parent.location.href='../goods.html'" id="goods">
+        <input type="button" class="business_button" value="草稿管理"
+onclick="window.parent.location.href='../draft.html'"
+id="draft">
+        <input type="button" class="business_button" value="订单管理" onclick=
+"window.parent.location.href='../orders.html'"
+id="order">
+        <input type="button" class="business_button" value="仓库管理" onclick="window.parent.location.href='../warehouse.html'" id="store">
+        <input type="button" class="business_button" value="客户信息" onclick="window.parent.location.href='../customers.html'" id="customer">
+        <input type="button" class="business_button" value="财务报告" onclick="window.parent.location.href='../financial_rpt.html'" >
+        <input type="button" class="business_button" value="更多业务" onclick="alert('敬请期待')">
+    </div>
+    <script>
+        window.onload = function(){
+            let status = localStorage.getItem("status");
+            
+        if(status==="1"){
+        }else if(status==="2"){
+            console.log(document.getElementById("draft"));
+            document.getElementById("draft").style["display"] = "none";
+            document.getElementById("order").style["display"] = "none";
+            document.getElementById("customer").style["display"] = "none";
+        }else if(status==="3"){
+            document.getElementById("store").style["display"] = "none";
+            document.getElementById("goods").style["display"] = "none";
+        }else{
+
+        }
+        }
+       
+    </script>
+
+</body>
+
+</html>

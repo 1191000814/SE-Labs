@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #header{
+            user-select: none;
+            width: 100%;
+            flex-direction: row;
+            height: 38px;
+        }
+        
+        #title{
+            margin-left: 400px;
+            margin-right: 400px;
+            display: inline;
+            font-size: 30px;
+        }
+
+        #hello{
+            display: inline;
+            max-height: 80vh;
+            max-width: 30vw;
+            font-size: 20px;
+        }
+
+        #logo{
+            cursor: pointer;
+            display: inline;
+            margin-top: 4px;
+            margin-left: 100px;
+            color: darkblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <!-- <img id="logo" src="../../sprites/logo.png" alt="企业logo"> -->
+        <h1 id="logo">通用批发零售业务管理系统登录</h1>
+        <h1 id="title">业务中心</h1>
+        <h1 id="hello">你好，管理员! </h1>
+    </div>
+</body>
+<script>
+    // 尝试显示用户名
+    let username = localStorage.getItem("username");
+    document.getElementById("hello").innerHTML = "你好，" + username;
+</script>
+</html>

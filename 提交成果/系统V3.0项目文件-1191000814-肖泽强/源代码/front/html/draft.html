@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>草稿管理</title>
+    <link rel="stylesheet" href="../css/layouts.css">
+    <link rel="shortcut icon" href="../sprites/tab.png" type="image/x-icon">
+    <script src="../js/orderVo.js"></script>
+    <script src="../js/utils.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    
+</head>
+<body onload="main()">
+    <div class="layout_0">
+        <div class="layout_0_div" >
+            <iframe class="layout_0_header" src="./layouts/header.html#header" frameborder="0"></iframe>
+            <div class="layout_0_body">
+                <iframe class="layout_1_left" src="./layouts/business.html" frameborder="0"></iframe>
+                <div class="layout_1_right" id="goods_body">
+                    <h2 class="business_name">草稿管理</h2>
+                    <div class="business_row" id="draft_add_div">
+
+                        <input type="button" value="新建或编辑草稿" id="add_draft_start">
+                    </div>
+                    
+
+                    <div id="input_draft_div" style="display: none;  flex: 8; flex-direction: column;">
+                        
+                        <div class="business_row" >
+                            <input type="text"
+                                id="customer_name" 
+                                oninput=" 
+                                    add_draft_input_type = 'customer_name';
+                                    add_draft_input_value = this.value;
+                                    update_add_draft_info_div(this);"
+                                placeholder="客户名称"
+                            >
+                            <input type="text" id="customer_id" style="user-select: none;" placeholder="客户ID">
+                            <input type="button" value="添加一项" id="button_add_a_row" style="position: absolute; right: 200px;">
+                        </div>
+                        <table class="order_items" id="add_draft_table">
+                            <th>货物名称</th>
+                            <th>货物id</th>
+                            <th>数量</th>
+                            <th>操作</th>
+                        </table>
+                        <div id="add_draft_info_div">
+                            <div class="business_row" >
+                            
+                                <input type="button" value="提交" id="add_draft" style="background-color: red;">
+                                <input type="button" value="保存并返回" id="add_draft_cancel">
+                                <input type="button" value="即刻结算" id="immediate_submit" style="background-color: green;">
+
+                            </div>
+                            
+                            <div class="business_table_div" id="add_draft_customer_table_div" style="overflow:scroll; display: none;">
+                                <table class="business_table" id="add_draft_customer_table">
+                                    <th>客户姓名</th>
+                                    <th>联系方式</th>
+                                    <th>工作单位</th>
+                                    <th>销售方式</th>
+                                    <th>选择</th>
+                                </table>
+                            </div>
+                            
+                            <div class="business_table_div" id="add_draft_goods_table_div" style="overflow:scroll;display: none;">
+                                <table class="business_table" id="add_draft_goods_table" >
+                                    <th>物品名称</th>
+                                    <th>零售价</th>
+                                    <th>批发价</th>
+                                    <th>成本 </th>
+                                    <th>选择</th>
+                                </table>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+                    <hr>
+                    <div class="business_table_div" id="draft_table_div">
+                        <table class="business_table" id="draft_table">
+                            <th>草稿id</th>
+                            <th>货物信息</th>
+                            <th>生成日期</th>
+                            <th>最后修改日期</th>
+                            <th>总价</th>
+                            <th>客户id</th>
+                            <th>利润</th>
+                            <th>操作</th>
+                        </table>
+
+                        
+
+                    </div>
+                        <!-- 到时候改回none inline-->
+                    <div class="business_row" id="div_update" style="display:none ">
+                       
+                        <table class="business_table" id="update">
+                            <th>货物id</th>
+                            <th>数量</th>
+                            <th>折扣率</th>
+                        </table>
+                       
+                        <input type="button" value="提交" id="update_submit">
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            <iframe class="layout_0_footer" src="./layouts/footer.html#footer" frameborder="0" style="flex-grow:0.1;"></iframe>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>

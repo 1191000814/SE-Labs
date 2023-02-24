@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.RepoMapper">
+
+  <select id="getByGoodsId" resultType="pojo.RepoInfo">
+    select * from retail.repo where goodsId=#{param1} and repoId=#{param2}
+  </select>
+
+  <select id="getByName" resultType="pojo.RepoInfo">
+    select * from retail.repo r inner join retail.goods g
+    on r.goodsId = g.id
+    where name like #{name} and repoId=#{repoId}
+  </select>
+
+  <select id="getAll" resultType="pojo.RepoInfo">
+    select * from retail.repo where repoId=#{repoId}
+  </select>
+
+  <delete id="deleteById">
+    delete from retail.repo where goodsId = #{param1} and repoId=#{param2}
+  </delete>
+
+  <update id="updateById">
+    update retail.repo
+    set goodsNum = #{goodsNum}
+    where goodsId = #{goodsId} and repoId=#{repoId}
+  </update>
+
+  <update id="modifyNumById">
+      update retail.repo set goodsNum = goodsNum + #{param2}
+      where goodsId=#{param1} and repoId=#{param3} and goodsNum + #{param2} >= 0
+  </update>
+
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+    insert into retail.repo values (#{goodsId}, #{goodsNum}, #{repoId})
+  </insert>
+
+</mapper>

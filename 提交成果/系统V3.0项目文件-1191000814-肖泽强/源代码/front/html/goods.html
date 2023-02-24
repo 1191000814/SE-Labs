@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>货物信息</title>
+    <link rel="stylesheet" href="../css/layouts.css">
+    <link rel="shortcut icon" href="../sprites/tab.png" type="image/x-icon">
+    <script src="../js/goods.js"></script>
+    <script src="../js/utils.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    
+</head>
+<body onload="main()">
+    <div class="layout_0">
+        <div class="layout_0_div" >
+            <iframe class="layout_0_header" src="./layouts/header.html#header" frameborder="0"></iframe>
+            <div class="layout_0_body">
+                <iframe class="layout_1_left" src="./layouts/business.html" frameborder="0"></iframe>
+                <div class="layout_1_right" id="goods_body">
+                    <h1 class="business_name">货物信息</h1>
+                    
+                    <div class="business_row" >
+                        
+                        <input type="button" value="查询" id="query_goods">
+                        <input type="text" id="goods_name" placeholder="输入名称查询货物">
+                        <!-- <input type="button" id="delete_goods" value="删除"> -->
+                     </div>
+                     
+                    <div  class="business_row">
+                        <input type="button" id="add_goods" value="增添">
+                        <input type="text" id="add_name" placeholder="货物名称">
+                        <input type="text"  min="0" id="add_tradePrice" placeholder="零售价">
+                        <input type="text"  min="0" id="add_price" placeholder="批发价">
+                        <input type="text"  min="0" id="add_cost" placeholder="成本">
+                    </div>
+
+                    
+
+                    <hr>
+
+                    <div class="business_table_div">
+                        <table class="business_table" id="show_table">
+                            <th>物品名称   </th>
+                            <th>id</th>
+                            <th>零售价   </th>
+                            <th>批发价</th>
+                            <th>成本 </th>
+                            <th>利润 </th>
+                            <th>操作</th>
+                            
+                        </table>
+                    </div>
+
+                    <div class="business_row" id="div_update" style="display: none;">
+                        <!-- 货物名称：<input type="text" id="update_name"> -->
+                        零售价：<input type="text" id="update_tradePrice">
+                        批发价: <input type="text" id="update_price">
+                        成本：<input type="text" id="update_cost">
+                        <input type="button" value="提交" id="update_submit">
+                    </div>
+                    
+
+                </div>
+            </div>
+            <iframe class="layout_0_footer" src="./layouts/footer.html#footer" frameborder="0" style="flex-grow:0.1;"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>

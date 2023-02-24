@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用批发零售业务管理系统登录</title>
+    <script src="../js/login.js"></script>
+    <script src="../js/utils.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shortcut icon" href="../sprites/tab.png" type="image/x-icon">
+</head>
+<body onload="main()">
+<!-- 登录页面 -->
+<div class="page" id="login">
+    <!-- 背景颜色 -->
+    <div class="background_color"></div>
+    <!-- 主要内容 -->
+    <div id="main">
+
+        <!-- 登录框 -->
+        <div id="login_box">
+            <h2 id="login_title">通用批发零售业务管理系统登录</h2>
+            <div class="login_box_row">
+                用户名<input type="text" class="input_box" id="username">
+            </div>
+            <div class="login_box_row">
+                密&emsp;码<input type="password" id="password" class="input_box">
+            </div>
+            <div class="login_box_row" id="submit">
+                <input id="login_button" type="button" value="登录" class="button_box">
+            </div>
+            <div class="login_box_row">
+                <a href="./register.html" id="register" class="bottom_option">注册新用户</a>
+                <a href="./about.html" id="about" class="bottom_option">关于系统</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

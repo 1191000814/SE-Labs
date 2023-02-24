@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../css/layouts.css">
+    <link rel="shortcut icon" href="../sprites/tab.png" type="image/x-icon">
+    <script src="../js/self.js"></script>
+    <script src="../js/utils.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    
+</head>
+<body onload="main()">
+    <div class="layout_0">
+        <div class="layout_0_div" >
+            <iframe class="layout_0_header" src="./layouts/header.html#header" frameborder="0"></iframe>
+            <div class="layout_0_body">
+                <iframe class="layout_1_left" src="./layouts/business.html" frameborder="0"></iframe>
+                <div class="layout_1_right" >
+                    <h1 class="business_name">个人中心</h1>
+                        
+                  <!-- 积压金额是放在仓库？？ -->
+                  <div class="business_row">
+             
+                        
+
+                        <div class="business_table_div">
+                            <table class="business_table" id="1">
+                                <th>用户名称   </th>
+                                <th>电子邮箱</th>
+                                <th>个人权限   </th>
+                                <th>销售额</th>
+                              
+                            </table>
+                        </div>
+
+                    <!-- yxh 1.4 显示积压金额：剩下货物数量*成本 -->
+                </div>
+
+                    <div class="business_row">
+                        <!-- <input type="button" value="查询销售额" id="button_query"> -->
+                    </div>
+                    <hr>
+                    <div class="business_table_div">
+                        
+                            <!-- <tr>
+                                <td>洗发水</td>
+                                <td>3瓶</td>
+                            </tr>
+                            <tr>
+                                <td>沐浴露</td>
+                                <td>3瓶</td>
+                            </tr> -->
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <iframe class="layout_0_footer" src="./layouts/footer.html#footer" frameborder="0" style="flex-grow:0.1;"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>

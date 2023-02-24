@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.DraftOrderMapper">
+  <select id="getById" resultType="pojo.DraftOrderVo">
+    select * from retail.draft_order where id = #{id}
+  </select>
+
+  <select id="getAll" resultType="pojo.DraftOrderVo">
+    select * from retail.draft_order
+  </select>
+
+  <select id="getMaxId" resultType="int">
+    select max(id) from retail.draft_order
+  </select>
+
+  <select id="getByCustomerId" resultType="pojo.DraftOrderVo">
+    select * from retail.draft_order where customer_id=#{customerId}
+  </select>
+
+  <delete id="remove">
+    delete from retail.draft_order where id = #{id}
+  </delete>
+
+  <update id="modify">
+    update retail.draft_order
+    set check_date=#{checkDate}, pay=#{pay}, refund=#{refund}, goods=#{goods}, price=#{price}, customer_id=#{customerId}, profit=#{profit}
+    where id = #{id}
+  </update>
+
+  <insert id="add" useGeneratedKeys="true" keyProperty="id">
+    insert into retail.draft_order values (#{id}, #{checkDate}, #{pay},#{refund}, #{goods}, #{price},#{customerId},#{profit})
+  </insert>
+
+</mapper>

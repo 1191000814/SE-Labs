@@ -1,0 +1,201 @@
+body{
+    height: 100%;
+}
+
+.layout_0{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: url("../sprites/background.jpeg");
+    /* 可以加图 */
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.layout_0_div{
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+}
+
+.layout_0_header{
+    /* border: 2px solid olive; */
+    margin-top: 0px;
+    height: 44px;
+    margin-bottom: 10px;
+    border-bottom: 4px solid #4f6b72;
+    
+}
+
+.layout_0_body{
+    display: flex;
+    height: 100%;
+    flex: 8;
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+
+.layout_0_footer{
+    margin-top: 20px;
+    border-top: 4px solid #4f6b72;
+    height: 20px;
+}
+
+
+.layout_1_left{
+    border-right:  4px#4f6b72 double;
+    margin-left: 10px;
+    padding-right: 20px;
+    margin-right: 40px;
+    width: 130px;
+}
+
+.layout_1_right{
+    width:  1800px;
+}
+
+
+.business_name{
+    width: 40%;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 32px;
+    border-bottom: 4px #4f6b72 double;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.layout_0_body hr {		
+    width: 60%;
+    border: 0;
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.business_row{
+    color: black; 
+    height: 40px;
+    font-size: 24px;
+   
+}
+
+.business_row input[type="text"]{
+    outline: none;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 4px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.business_row input[type="button"]{
+    outline: none;
+    background-color: rgb(65, 143, 189);
+    color: white;
+    width: 200px;
+    border-radius: 4px;
+    height: 30px;
+    margin-left: 0px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.business_row input[type="button"]:hover{
+    background-color: rgba(65, 143, 189, 0.5);
+}
+
+/* 表格部分 */
+.business_table{
+    width: 1600px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.business_table_div{
+    overflow-y: auto;
+}
+
+th { 
+    font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+    color: #4f6b72; 
+    border-right: 1px solid #C1DAD7; 
+    border-bottom: 1px solid #C1DAD7; 
+    border-top: 1px solid #C1DAD7; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+    text-align: left; 
+    padding: 6px 6px 6px 12px; 
+    background: #CAE8EA  no-repeat; 
+    width: fit-content;
+} 
+    
+th.nobg { 
+    border-top: 0; 
+    border-left: 0; 
+    border-right: 1px solid #C1DAD7; 
+    background: none; 
+} 
+    
+td { 
+    border-right: 1px solid #C1DAD7; 
+    border-bottom: 1px solid #C1DAD7; 
+    background: #fff; 
+    font-size:11px; 
+    padding: 6px 6px 6px 12px; 
+    height: fit-content;
+    color: #4f6b72; 
+    width: min-content;
+} 
+
+td input{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+    
+    
+td.alt { 
+    background: #F5FAFA; 
+    color: #797268; 
+} 
+    
+th.spec { 
+    border-left: 1px solid #C1DAD7; 
+    border-top: 0; 
+    background: #fff no-repeat; 
+    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+}
+
+th.specalt { 
+    border-left: 1px solid #C1DAD7; 
+    border-top: 0; 
+    background: #f5fafa no-repeat; 
+    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+    color: #797268; 
+}
+
+.table_row_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table_row_button{
+    outline: none;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-left: 2%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.table_row_button:hover{
+    background-color: wheat;
+}
+

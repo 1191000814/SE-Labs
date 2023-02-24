@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仓库管理</title>
+    <link rel="stylesheet" href="../css/layouts.css">
+    <link rel="shortcut icon" href="../sprites/tab.png" type="image/x-icon">
+    <script src="../js/warehouse.js"></script>
+    <script src="../js/utils.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    
+</head>
+<body onload="main()">
+    <div class="layout_0">
+        <div class="layout_0_div" >
+            <iframe class="layout_0_header" src="./layouts/header.html#header" frameborder="0"></iframe>
+            <div class="layout_0_body">
+                <iframe class="layout_1_left" src="./layouts/business.html" frameborder="0"></iframe>
+                <div class="layout_1_right" >
+                    <h1 class="business_name">仓库管理</h1>
+                        
+                  <!-- 积压金额是放在仓库？？ -->
+                  <div class="business_row">
+                   
+                    <input type="text" value="积压金额" 
+                    style="text-align: center;color: aliceblue; background-color: rgb(240, 149, 14); border: 1px solid black; height: 30px;" readonly="readonly">
+                       <input type="text "  value="1" id="remain_money" 
+                       style="text-align: center;color: aliceblue; background-color: rgb(240, 149, 14); border: 1px solid black; height: 30px;" readonly="readonly">
+                    <!-- yxh 1.4 显示积压金额：剩下货物数量*成本 -->
+                </div>
+
+                    <div class="business_row">
+                        <input type="button" value="查询商品" id="button_query">
+                        <input type="text" id="input_warehouse" placeholder="仓库选码" list="input_warehouse_list">
+                        <datalist id="input_warehouse_list">
+                            <option value="1">仓库1</option>
+                            <option value="2">仓库2</option>
+                            <option value="3">仓库3</option>
+                           
+                        </datalist>
+                        <input type="text" id="input_goods" placeholder="商品名称">
+                    </div>
+                    <div class="business_row">
+                        <input type="button" value="转移货物" id="button_query1">
+                        <input type="text" id="1" placeholder="货物ID">
+                        <input type="text" id="2" placeholder="货物数量">
+                        <input type="text" id="3" placeholder="原仓库ID">
+                        <input type="text" id="4" placeholder="新仓库ID">
+                    </div>
+                    <div class="business_row">
+                        <input type="button" value="进货" id="add_goods">
+                        <input type="text" id="goods_id" placeholder="货物ID">
+                        <input type="text" id="goods_num" placeholder="货物数量">
+                        <input type="text" id="ware_id" placeholder="仓库ID">
+                    </div>
+                    <hr>
+                    <div class="business_table_div">
+                        <table class="business_table" id="warehouse_table">
+                            <th>ID</th>
+                            <th>名称</th>
+                            <th>数量</th>
+                            <th>仓库</th>
+                            <th>积压金额</th>
+                           
+                            <!-- <tr>
+                                <td>洗发水</td>
+                                <td>3瓶</td>
+                            </tr>
+                            <tr>
+                                <td>沐浴露</td>
+                                <td>3瓶</td>
+                            </tr> -->
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <iframe class="layout_0_footer" src="./layouts/footer.html#footer" frameborder="0" style="flex-grow:0.1;"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>

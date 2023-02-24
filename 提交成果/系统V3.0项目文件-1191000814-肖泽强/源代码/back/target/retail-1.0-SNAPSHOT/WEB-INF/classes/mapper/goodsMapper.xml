@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.GoodsMapper">
+  <select id="getById" resultType="pojo.Goods">
+    select * from retail.goods where id = #{id}
+  </select>
+
+  <select id="getByName" resultType="pojo.Goods">
+    select * from retail.goods where name like #{name}
+  </select>
+
+  <select id="getByFullName" resultType="pojo.Goods">
+    select * from retail.goods where name = #{fullName}
+  </select>
+
+  <select id="getAll" resultType="pojo.Goods">
+    select * from retail.goods
+  </select>
+
+  <select id="getMaxId" resultType="int">
+    select ifnull(max(id), 0) from retail.goods
+  </select>
+
+  <delete id="deleteById">
+    delete from retail.goods where id = #{id}
+  </delete>
+
+  <update id="updateById">
+    update retail.goods
+    set price = #{price}, tradePrice=#{tradePrice}, cost=#{cost}
+    where id = #{id}
+  </update>
+
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+    insert into retail.goods values (#{id}, #{name}, #{price},#{tradePrice},#{cost}, #{url})
+  </insert>
+
+</mapper>

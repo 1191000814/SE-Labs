@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.CompanyMapper">
+  <select id="getInfo" resultType="pojo.Company">
+    select * from retail.company;
+  </select>
+
+  <update id="update">
+    update retail.company set cost=#{cost}, sales=#{sales}, remain=#{remain}, capital=#{capital}
+  </update>
+<!--  只有一行, 所以全部更新-->
+</mapper>

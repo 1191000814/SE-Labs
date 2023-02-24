@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客户信息</title>
+    <link rel="stylesheet" href="../css/layouts.css">
+    <link rel="shortcut icon" href="../sprites/tab.png" type="image/x-icon">
+    <script src="../js/customers.js"></script>
+    <script src="../js/utils.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid purple; */
+        }
+    </style>
+    
+</head>
+<body onload="main()">
+    <div class="layout_0">
+        <div class="layout_0_div">
+            <iframe class="layout_0_header" src="./layouts/header.html#header" frameborder="0"></iframe>
+            <div class="layout_0_body" >
+                <iframe class="layout_1_left" src="./layouts/business.html" frameborder="0"></iframe>
+                <div  class="layout_1_right" id="clients_body" style="flex: 4;">
+                    <h1 class="business_name">客户信息</h1>
+                    <!-- 增加顾客信息 -->
+                    <div class="business_row">
+                        <input type="button" value="添加" id="add_client">
+                        <input type="text" id="name" placeholder="客户姓名">
+                        <input type="text" id="phone" placeholder="联系方式">
+                        <input type="text" id="company" placeholder="客户单位">
+                        <input type="text" id="method" list="method_list"  placeholder="销售方式">
+                        <datalist id="method_list">
+                            <option value="零售">零售</option>
+                            <option value="批发">批发</option>
+                        </datalist>
+                    </div>
+                    <!-- 按照名称查询顾客   12.10 by yxh-->
+                    <div class="business_row"> 
+                        <input type="button" value="查询" id="search_client">
+                        <input type="text"  id="name_client" placeholder="客户姓名">
+                    </div>
+                    <hr>
+                    <div class="business_table_div">
+                        <table class="business_table" id="show_table">
+                            <th>客户名字</th>
+                            <th>联系方式</th>
+                            <th>工作单位</th>
+                            <th>销售方式</th>
+                            <th>操作</th>
+                        </table>
+                    </div>
+
+                    <div class="business_row" id="div_update" style="display: none;">
+                        <input type="button" value="提交修改" id="submit_update">
+                        <input type="text" id="phone_update" placeholder="联系电话">
+                        <input type="text" id="company_update" placeholder="客户单位">
+                        <input type="text" id="method_update" list="method_update_list" placeholder="销售方式">
+                        <datalist id="method_update_list" >
+                            <option value="零售">零售</option>
+                            <option value="批发">批发</option>
+                        </datalist>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+            <iframe class="layout_0_footer" src="./layouts/footer.html#footer" frameborder="0" style="flex-grow:0.1;"></iframe>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>

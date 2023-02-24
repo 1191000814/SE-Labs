@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--这个-config文件叫全局配置文件
+configuration中所有的标签都有一定的顺序,不能乱序
+-->
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <!--  在configuration标签内添加自定义配置,如environment-->
+  <properties resource="jdbc-config.properties"/>
+  <!--  properties标签表示这个配置文件的变量都可以通过映射从resource或者url所在文件中获取
+  目录名字记得带后缀.properties
+   resource是文件目录, url是网络目录或磁盘目录
+  -->
+  <settings>
+    <setting name="mapUnderscoreToCamelCase" value="true"/>
+    <!--    这个设置可以将数据库的下划线命名法转化为JavaBean中的驼峰命名法-->
+    <setting name="lazyLoadingEnabled" value="true"/>
+    <!--    延迟加载的全局开关。当开启时，所有关联对象都会延迟加载。-->
+    <setting name="aggressiveLazyLoading" value="false"/>
+    <!--    开启时，任一方法的调用都会加载该对象的所有延迟加载属性。 否则，每个延迟加载属性会按需加载-->
+    <setting name="logImpl" value="COMMONS_LOGGING"/>
+    <!--    打印所有日志信息, 包括执行的sql语句-->
+    <setting name="cacheEnabled" value="true"/>
+    <!--    开启二级缓存-->
+  </settings>
+
+  <typeAliases>
+    <!--    给pojo.User起别名User(不区分大小写), 但是这样它以前的名字就不能用了-->
+  </typeAliases>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="poolMaximumActiveConnections" value="40"/>
+      </dataSource>
+    </environment>
+  </environments>
+
+  <mappers>
+    <mapper resource="mapper/userMapper.xml"/>
+    <mapper resource="mapper/goodsMapper.xml"/>
+    <mapper resource="mapper/repoMapper.xml"/>
+    <mapper resource="mapper/orderMapper.xml"/>
+    <mapper resource="mapper/draftOrderMapper.xml"/>
+    <mapper resource="mapper/orderItemMapper.xml"/>
+    <mapper resource="mapper/customerMapper.xml"/>
+    <mapper resource="mapper/companyMapper.xml"/>
+  </mappers>
+
+</configuration>
